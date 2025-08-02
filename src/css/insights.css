@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #0f0f0f, #111827, #000);
+  color: #f3f4f6;
+}
+
+/* Fixed Topbar */
+.topbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1f1f2f;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3f3f46;
+  z-index: 1000;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #f43f5e, #6366f1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#backBtn {
+  background: linear-gradient(to right, #f43f5e, #6366f1);
+  border: none;
+  padding: 1rem 3rem;
+  color: white;
+  border-radius: 2px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 5rem; 
+}
+
+/* Page heading */
+.page-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 120px;
+  margin-bottom: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #f43f5e, #6366f1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Filters */
+#filters {
+  padding: 10px 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+#filters select,
+#filters button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: #1f2937;
+  color: white;
+  border: 1px solid #6366f1;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Cards */
+#insightCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(24, 24, 27, 0.75);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  border: 1px solid #3f3f46;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+  color: #f3f4f6;
+  backdrop-filter: blur(10px);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 4px 20px rgba(243, 39, 103, 0.4); 
+  background-color: #16181b; 
+}
+
+.card-heading {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emoji {
+  font-size: 1.3rem;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #f43f5e, #6366f1); /* rose to indigo */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+
+/* Chart Sections */
+.chartSection {
+  padding: 30px 20px;
+  background: rgba(24, 24, 27, 0.75);
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 16px;
+  border: 1px solid #3f3f46;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.chartSection h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f3f4f6;
+}
+
+/* Canvas */
+canvas {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+/* Top 5 Expenses */
+#topExpenses {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#topExpenses h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#topList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.topItem {
+  background: rgba(24, 24, 27, 0.75);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+  border: 1px solid #3f3f46;
+  flex: 1 1 200px;
+  text-align: center;
+  color: #f3f4f6;
+}
+
+/* No Data Message */
+.no-data-msg {
+  display: none;
+  text-align: center;
+  color: #f43f5e;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.chartSection:hover,
+#topExpenses:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 4px 20px rgba(243, 39, 103, 0.4); 
+  background-color: #16181b; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finora Dashboard</title>
+  <link rel="stylesheet" href="../src/css/dashboard.css" />
+  <script src="https://kit.fontawesome.com/a2e0cf74b3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="topbar">
+    <div class="logo-section">
+      <img src="../assets/logo.png" alt="Logo" class="nav-logo" />
+      <h1 class="nav-title">Finora</h1>
+    </div>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <h2 class="welcome-text">Welcome to <span class="gradient-text">Finora</span></h2>
+
+    <!-- Dashboard Cards -->
+    <section class="dashboard-grid">
+      <div class="dashboard-card">
+        <h2 class="card-heading">Add Expense</h2>
+        <p>Track your daily spending and manage your budget better.</p>
+        <button id="openAddExpenseBtn" class="card-btn">+ Add Expense</button>
+      </div>
+
+      <div class="dashboard-card">
+        <h2 class="card-heading"> Monthly Summary</h2>
+        <p>Check your total expenses for a selected month and year.</p>
+        <div class="filters">
+          <select id="summaryMonthSelect"></select>
+          <select id="summaryYearSelect"></select>
+        </div>
+        <div id="monthlySummary">₹0</div>
+      </div>
+
+      <div class="dashboard-card">
+        <h2 class="card-heading">Expense History</h2>
+        <p>Browse all past expenses and edit/delete records.</p>
+        <button id="viewHistoryBtn" class="card-btn">View History</button>
+      </div>
+
+      <div class="dashboard-card">
+        <h2 class="card-heading">Expense Insights</h2>
+        <p>Visual reports of where and how your money is spent.</p>
+        <button id="viewInsightsBtn" class="card-btn">View Insights</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="addExpenseModal" class="modal">
+    <div class="modal-content">
+      <span id="closeModalBtn" class="close">&times;</span>
+      <h2>Add Expense</h2>
+      <form id="addExpenseForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" required />
+
+        <label for="name">Expense Name:</label>
+        <input type="text" id="name" required />
+
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" required />
+
+        <label for="paymentType">Payment Type:</label>
+        <select id="paymentType" required>
+          <option value="">Select</option>
+          <option value="Cash">Cash</option>
+          <option value="Card">Card</option>
+          <option value="UPI">UPI</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option value="">Select</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Bills">Bills</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Health">Health</option>
+          <option value="Education">Education</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button type="submit">Save Expense</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../src/js/dashboard.js"></script>
+  <div id="toast" class="toast"></div>
+</body>
+</html>

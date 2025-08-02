@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insights - Expense Tracker</title>
+  <link rel="stylesheet" href="../src/css/insights.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+  <!-- Fixed Navbar -->
+  <header class="topbar">
+    <div class="logo-section">
+      <img src="../assets/logo.png" alt="Logo" class="nav-logo" />
+      <h1 class="nav-title">Finora</h1>
+    </div>
+    <button id="backBtn">← Dashboard</button>
+  </header>
+
+  <!-- Heading -->
+  <h2 class="page-heading">Expense <span class="gradient-text">Insights</span></h2>
+
+  <!-- Filters -->
+  <section id="filters">
+    <select id="monthSelect"></select>
+    <select id="yearSelect"></select>
+    <button id="applyBtn">Apply Filters</button>
+  </section>
+
+  <!-- Insight Cards -->
+  <section id="insightCards">
+    <div class="card">
+      <h3 class="card-heading">
+        <span class="emoji">💰</span>
+        <span class="gradient-text">Total Spent (Selected Month)</span>
+      </h3>
+      <p id="totalSpent">₹0</p>
+    </div>
+    <div class="card">
+      <h3 class="card-heading">
+        <span class="emoji">📆</span>
+        <span class="gradient-text">Peak Month (Selected Year)</span>
+      </h3>
+      <p id="peakDay">-</p>
+    </div>
+    <div class="card">
+      <h3 class="card-heading">
+        <span class="emoji">⚖️ </span>
+        <span class="gradient-text">Avg Daily (Selected Month)</span>
+      </h3>
+      <p id="avgDaily">₹0</p>
+    </div>
+    <div class="card">
+      <h3 class="card-heading">
+        <span class="emoji">📈</span>
+        <span class="gradient-text"> Top Category (Selected Month)</span>
+      </h3>
+      <p id="leastCategory">-</p>
+    </div>
+  </section>
+
+  <!-- Charts -->
+  <section class="chartSection">
+    <h2 class="gradient-text" >Payment Type Distribution (Monthly)</h2>
+    <canvas id="paymentChart"></canvas>
+    <div id="noDataPayment" class="no-data-msg">No data available for Insights</div>
+  </section>
+
+  <section class="chartSection">
+    <h2 class="gradient-text">Spending Trend (Monthly of whole year)</h2>
+    <canvas id="monthlyChart"></canvas>
+    <div id="noDataMonthly" class="no-data-msg">No data available for Insights</div>
+  </section>
+
+  <section class="chartSection">
+    <h2 class="gradient-text">Category-wise Breakdown (Monthly)</h2>
+    <canvas id="categoryChart"></canvas>
+    <div id="noDataCategory" class="no-data-msg">No data available for Insights</div>
+  </section>
+
+  <!-- Top 5 Expenses -->
+  <section id="topExpenses">
+    <h2 class="gradient-text">Top 5 Expenses (Selected Month)</h2>
+    <div id="topList"></div>
+    <div id="noDataTopList" class="no-data-msg">No data available for Insights</div>
+  </section>
+
+  <script src="../src/js/insights.js"></script>
+</body>
+</html>
