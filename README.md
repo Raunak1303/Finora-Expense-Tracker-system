@@ -1,4 +1,4 @@
-## 🌐 [Live Demo](https://example.com)  
+## 🌐 [Live Demo](https://finora-expense-tracker-system.netlify.app/)  
 
 # Finora – Expense Tracker System
 
@@ -10,43 +10,43 @@ Finora is a full-stack expense tracker system that helps users log, manage, and 
 
 ### Signup Page  
 New users can create an account using this clean and responsive form.
-![Signup](assets/screenshots/signup.png)
+![Signup](public/assets/screenshots/signup.png)
 
 ### Login Page  
 Secure login screen for returning users to access their dashboard.
-![Login](assets/screenshots/login.png)
+![Login](public/assets/screenshots/login.png)
 
 ### Home Dashboard  
 Central hub with 4 actionable cards: Add Expense, Summary, History, and Insights.
-![Dashboard](assets/screenshots/homedashboard.png)
+![Dashboard](public/assets/screenshots/homedashboard.png)
 
 ### Add Expense Modal  
 A modal popup to add new expenses with fields like name, amount, date, mode, and category.
-![Add Expense Modal](assets/screenshots/addexpensemodal.png)
+![Add Expense Modal](public/assets/screenshots/addexpensemodal.png)
 
 ### Expense History  
 View, filter, edit, or delete past expenses with a clean, responsive layout.
-![Expense History](assets/screenshots/expensehistory.png)
+![Expense History](public/assets/screenshots/expensehistory.png)
 
 ### Insights – Monthly Summary  
 See total spent, peak month, average daily spend, and top category.
-![Insights Monthly](assets/screenshots/insightsmonthly.png)
+![Insights Monthly](public/assets/screenshots/insightsmonthly.png)
 
 ### Payment Type Distribution  
 Visual pie chart showing spending distribution across payment modes.
-![Payment Type Chart](assets/screenshots/paymenttypedistribution.png)
+![Payment Type Chart](public/assets/screenshots/paymenttypedistribution.png)
 
 ### Monthly Spending Trend  
 Line chart displaying monthly spending trends across the selected year.
-![Monthly Trend](assets/screenshots/monthlyspendingtrend.png)
+![Monthly Trend](public/assets/screenshots/monthlyspendingtrend.png)
 
 ### Category-wise Monthly Breakdown  
-Bar chart showing spending distribution across different categories.
-![Category Breakdown](assets/screenshots/categorywisemonthly.png)
+Donut chart showing spending distribution across different categories.
+![Category Breakdown](public/assets/screenshots/categorywisemonthly.png)
 
 ### Top 5 Expenses of the Month  
 Highlights the highest individual expenses in the selected month.
-![Top 5 Expenses](assets/screenshots/topexpenses.png)
+![Top 5 Expenses](public/assets/screenshots/topexpenses.png)
 
 ---
 
@@ -78,6 +78,7 @@ Highlights the highest individual expenses in the selected month.
    DB_PASSWORD=yourpassword
    DB_NAME=expense_tracker
    JWT_SECRET=your_jwt_secret
+   DB_PORT=yourdbport
 
 6. **Start the server**
     ```bash
