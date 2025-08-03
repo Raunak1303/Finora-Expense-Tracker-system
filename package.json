@@ -1,4 +1,11 @@
 {
+  "name": "expense-tracker-backend",
+  "version": "1.0.0",
+  "description": "Finora expense Tracker System",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
