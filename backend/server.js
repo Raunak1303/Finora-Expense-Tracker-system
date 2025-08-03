@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors({
-  origin: "https://finora-expense-tracker-system.netlify.app/",
+  origin: "https://finora-expense-tracker-system.netlify.app",
   credentials: true
 }));
 app.use(bodyParser.json());
