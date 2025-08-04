@@ -6,10 +6,23 @@ require("dotenv").config();
 const app = express();
 const PORT = 3000;
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://finora-expense-tracker-system.netlify.app"
+];
+
 app.use(cors({
-  origin: "https://finora-expense-tracker-system.netlify.app",
+  origin: function (origin, callback) {
+    if (!origin) return callback(null, true); // allows tools like curl or server-to-server
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true); // allow request
+    } else {
+      return callback(new Error("Not allowed by CORS")); // block request
+    }
+  },
   credentials: true
 }));
+
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
