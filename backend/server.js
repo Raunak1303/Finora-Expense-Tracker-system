@@ -13,11 +13,11 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true); // allows tools like curl or server-to-server
+    if (!origin) return callback(null, true);
     if (allowedOrigins.includes(origin)) {
-      return callback(null, true); // allow request
+      return callback(null, true); 
     } else {
-      return callback(new Error("Not allowed by CORS")); // block request
+      return callback(new Error("Not allowed by CORS")); 
     }
   },
   credentials: true
