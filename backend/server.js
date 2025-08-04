@@ -34,6 +34,11 @@ app.use("/api", authRoutes);
 app.use("/api/expenses", expenseRoutes);
 app.use("/api/insights", insightsRoutes);
 
+// Health route to prevent Render from sleeping
+app.get("/health", (req, res) => {
+  res.status(200).send("Server is awake!");
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
